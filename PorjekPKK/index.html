@@ -85,12 +85,15 @@
         text-decoration: none;
         font-size: 18px;
         display: inline-block;
-        transition: transform 0.3s ease, color 0.3s ease;
+        transition: transform 0.8s ease, color 0.3s ease;
       }
 
       nav a:hover {
-        color: #ccc;
         transform: translateY(-5px);
+        padding: 10px;
+        border-radius: 7px;
+        background-color: beige;
+        transition: 0.3s;
       }
 
       .hero {
@@ -214,17 +217,6 @@
         background-color: #ffe54c;
       }
 
-      footer {
-        background-color: #703d3d;
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-        margin: auto;
-        position: relative;
-        bottom: 0;
-        width: 100%;
-      }
-
       .media-sosial {
         display: flex;
         justify-content: center;
@@ -251,9 +243,9 @@
         width: fit-content;
         height: auto;
         grid-template-columns: repeat(3, 1fr);
-        gap: 50px;
-        /* margin-top: 50px; */
-        max-width: 900px;
+        gap: 80px;
+        margin-top: 50px;
+        max-width: 950px;
       }
 
       .testi-kartu {
@@ -305,9 +297,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 50px auto;
+        margin: 20px auto;
         padding: 15px;
-        width: 100%;
+        width: 1000px;
         height: 300px;
         gap: 55px;
       }
@@ -330,6 +322,19 @@
         -webkit-text-stroke: 0.5px black;
         text-shadow: 0 5px 20px black;
         max-width: 300px;
+      }
+      footer {
+        background-color: #703d3d;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        margin: auto;
+        position: relative;
+      }
+      @media only screen and (max-width: 768px) {
+        .nav a {
+          width: 70px;
+        }
       }
     </style>
   </head>
@@ -408,7 +413,7 @@
         <div class="icons"><span>🍴</span><span>🍊</span><span>🌿</span></div>
       </div>
       <div class="testi-kartu">
-        <img src="donat.jpg" alt="Pp" />
+        <img src="testi1.png" alt="Pp" />
         <h2>RIVQI</h2>
         <p class="testi"></p>
         <div class="rating">
@@ -418,7 +423,7 @@
       </div>
 
       <div class="testi-kartu">
-        <img src="donat.jpg" alt="Pp" />
+        <img src="testi1.png" alt="Pp" />
         <h2>ZEBIAN</h2>
         <p class="testi"></p>
         <div class="rating">
