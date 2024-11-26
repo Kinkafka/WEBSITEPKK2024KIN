@@ -1,1097 +1,535 @@
 <!DOCTYPE html>
-
-
-
 <html lang="id">
-
-
-
   <head>
-
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Cemilan Ceria</title>
-
     <link
-
       rel="stylesheet"
-
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-
       <link
-
       rel="preconnect"
-
       href="https://fonts.googleapis.com"
-
     />
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
-
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik+Wet+Paint&display=swap"
-
       rel="stylesheet"
-
     />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
-
       href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik+Wet+Paint&display=swap"
-
       rel="stylesheet"
-
     />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
-
       href="https://fonts.googleapis.com/css2?family=Caudex&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik+Wet+Paint&display=swap"
-
       rel="stylesheet"
-
     />
-
     <style>
-
-      html, body {
-
-         overflow-x: hidden;
-
-      }
-
-      * {
-
-  box-sizing: border-box;
-
-}
-
       body {
-
         margin: 0;
-
         padding: 0;
-
         font-family: Arial, sans-serif;
-
         /* background-color: #a39874; */
-
         background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cf291894-be58-4d6e-93e6-f07e12cc4ad1/d5n4lmo-6d0802c6-71c6-46b0-9677-09ba64356b2d.jpg/v1/fill/w_900,h_546,q_75,strp/dark_sky_4_by_koko_stock_d5n4lmo-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTQ2IiwicGF0aCI6IlwvZlwvY2YyOTE4OTQtYmU1OC00ZDZlLTkzZTYtZjA3ZTEyY2M0YWQxXC9kNW40bG1vLTZkMDgwMmM2LTcxYzYtNDZiMC05Njc3LTA5YmE2NDM1NmIyZC5qcGciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.Sy39znJrA7hZaoUIZA8blWesrlh1hL8nxApgT_F-sxU);
-
         background-size: cover;
-
       }
-
-
 
       header {
-
         background-color: #703d3d;
-
         padding: 20px;
-
         display: flex;
-
         justify-content: space-between;
-
         align-items: center;
-
         position: sticky;
-
       }
-
-
 
       .logo {
-
         display: flex;
-
         align-items: center;
-
       }
-
-
 
       .textkanan {
-
         font-size: 40px;
-
         font-family: "Poppins", sans-serif;
-
         /* font-style: italic; */
-
         color: rgb(255, 193, 149);
-
         padding-left: 10px;
-
         font-weight: bold;
-
       }
-
-
 
       .logo img {
-
         width: 70px;
-
         height: 70px;
-
         border-radius: 50%;
-
       }
-
-
 
       nav ul {
-
         list-style: none;
-
         margin: 0;
-
         padding: 0;
-
         display: flex;
-
         align-items: center;
-
       }
-
-
 
       nav li {
-
         margin-right: 20px;
-
       }
 
-
-
       nav a {
-
         display: inline-block;
-
         color: #000;
-
         text-decoration: none;
-
         padding: 10px 20px;
-
         transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 
       }
 
-      
-
       nav a:hover {
-
         color: #fff;
-
         background-color: #007bff;
-
         transform: scale(1.1);
-
       }
-
-      
 
       nav a:active {
-
         transform: scale(0.95); 
-
       }
-
-
-
       .hero {
-
         text-align: center;
-
         color: ghostwhite;
-
         padding: 50px 20px;
-
         background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9c56bfd2-8210-442a-93b2-c9bee1d616ee/dg3zm9u-3f7059d2-1287-4fab-950f-898a285d2cdd.png/v1/fill/w_1095,h_730/anime_girl_render__2_by_rikksenpaigfx_dg3zm9u-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODU0IiwicGF0aCI6IlwvZlwvOWM1NmJmZDItODIxMC00NDJhLTkzYjItYzliZWUxZDYxNmVlXC9kZzN6bTl1LTNmNzA1OWQyLTEyODctNGZhYi05NTBmLTg5OGEyODVkMmNkZC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.vZwSOLlOwPtqnLJYC1LkL5-08nMmWUh3mih6jp571Wk");
-
         background-size: cover;
-
         background-position: center;
-
         height: 400px;
-
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-
         position: relative;
-
       }
-
-
 
       .hero h1 {
-
         font-family: "Poppins", sans-serif;
-
+        font-weight: 400 bold;
         font-style: normal;
-
         font-size: 65px;
-
         margin-top: 100px;
-
         color: #ffffff;
-
         -webkit-text-stroke: 0.8px black;
-
         /* text-shadow: 0 5px 20px black; */
-
       }
-
-
 
       .hero p {
-
         font-weight: bold;
-
         font-family: "Poppins", sans-serif;
-
         font-size: 25px;
-
         color: rgb(238, 235, 64);
-
         -webkit-text-stroke: 0.3px black;
-
         text-decoration: underline 0.4px white;
-
         /* text-shadow: 0 5px 20px black; */
-
       }
-
-
 
       /* nagian tombol */
-
       .button-52 {
-
         font-size: 16px;
-
         font-weight: 200;
-
         letter-spacing: 9px;
-
         background-color: rgba(0, 0, 0, 0);
-
         padding: 13px 20px;
-
         border: 1px solid black;
-
         position: relative;
-
         margin-top: 20px;
-
       }
-
       .button-52:hover {
-
         background-color: rgb(255, 0, 0);
-
       }
-
-
 
       .kontainer {
-
         display: flex;
-
         flex-wrap: wrap;
-
         justify-content: center;
-
-        
-
+        margin: 30px auto;
       }
-
-
 
       .kontainer1 {
-
         display: flex;
-
         flex-wrap: wrap;
-
         justify-content: center;
-
         /* max-width: 1200px; */
-
       }
-
-
 
       .artikel {
-
         background: #fff;
-
         border-radius: 10px;
-
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
         margin: 15px;
-
         overflow: hidden;
-
         transition: transform 0.2s;
-
         width: 300px;
-
         padding: 15px;
-
         display: flex;
-
         flex-direction: column;
-
       }
-
-
 
       .artikel:hover {
-
         transform: scale(1.05);
-
       }
-
-
 
       .kgambar {
-
-        aspect-ratio: 16/9;
-
         width: 100%;
-
+        height: 200px;
         object-fit: cover;
-
+        border-radius: 10px;
       }
-
-
 
       .konten {
-
         padding: 15px;
-
         display: flex;
-
         flex-direction: column;
-
         flex-grow: 1;
-
       }
-
-
 
       .judul {
-
         font-size: 20px;
-
         font-weight: bold;
-
         margin: 0;
-
       }
-
-
 
       .deskripsi {
-
         font-size: 14px;
-
         color: #555;
-
       }
-
-
 
       .kartu-tombol-beli {
-
         display: inline-block;
-
         background-color: #703d3d;
-
         color: #fff;
-
         padding: 10px 20px;
-
         text-align: center;
-
         text-decoration: none;
-
         border-radius: 5px;
-
         margin-top: 15px;
-
         width: 100%;
-
         font-weight: bold;
-
         transition: background-color 0.3s;
-
       }
-
-
 
       .kartu-tombol-beli:hover {
-
         background-color: #ffe54c;
-
       }
-
-
 
       .media-sosial {
-
         display: flex;
-
         justify-content: center;
-
         gap: 15px;
-
         margin-top: 10px;
-
       }
-
-
 
       .media-sosial a {
-
         text-decoration: none;
-
       }
-
-
 
       .media-sosial i {
-
         font-size: 24px;
-
         color: #fff;
-
         transition: color 0.3s;
-
       }
-
-
 
       .media-sosial i:hover {
-
         color: #ccc;
-
       }
-
       .testimoni {
-
         display: grid;
-
         margin: auto;
-
         width: fit-content;
-
         height: auto;
-
         grid-template-columns: repeat(3, 1fr);
-
         gap: 80px;
-
         margin-top: 50px;
-
         max-width: 950px;
-
       }
-
-
 
       .testi-kartu {
-
         background-color: #ffffff;
-
         border: 1px solid #e3e1dd;
-
         border-radius: 10px;
-
         padding: 20px;
-
         width: 200px;
-
-        height: 200px;
-
+        height: 330px;
         text-align: center;
-
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
       }
-
-
 
       .testi-kartu h2 {
-
         font-size: 20px;
-
         color: #d95b00;
-
       }
-
-
 
       .testi-kartu img {
-
         width: 200px;
-
         height: 200px;
-
       }
-
-
 
       .testi {
-
         font-size: 14px;
-
         color: #555555;
-
       }
-
-
 
       .rating {
-
         display: flex;
-
         justify-content: center;
-
         gap: 5px;
-
       }
-
-
 
       .rating span {
-
         font-size: 18px;
-
         color: #ffcc00;
-
       }
-
-
 
       .icons {
-
         display: flex;
-
         justify-content: space-around;
-
         margin-top: 10px;
-
         font-size: 16px;
-
         color: #d95b00;
-
       }
-
-
 
       .mapswrapper {
-
         display: flex;
-
         justify-content: center;
-
         align-items: center;
-
         margin: 20px auto;
-
         padding: 15px;
-
         width: 1000px;
-
         height: 300px;
-
         gap: 55px;
-
       }
-
-
 
       .mapswrapper iframe {
-
         box-shadow: 9px 7px 7px black;
-
         border-radius: 20px;
-
         width: 50%;
-
         max-width: 600px;
-
         height: 100%;
-
         max-height: 300px;
-
       }
 
-
-
       .mapswrapper h1 {
-
         color: ghostwhite;
-
         font-family: "Poppins", sans-serif;
-
         font-weight: 400 bold;
-
         font-style: normal;
-
         font-size: 65px;
-
         -webkit-text-stroke: 0.5px black;
-
         text-shadow: 0 5px 20px black;
-
         max-width: 300px;
-
       }
-
       footer {
-
         background-color: #703d3d;
-
         color: #fff;
-
         text-align: center;
-
         padding: 20px;
-
         margin: auto;
-
         position: relative;
-
       }
-
-      @media only screen and (max-width: 450px) {
-
-      body {
-
-        font-size: 14px;
-
-      }
-
-    
-
-      header {
-
-        flex-direction: column;
-
-        text-align: center;
-
-      }
-
-    
-
-      .logo img {
-
-        width: 50px;
-
-        height: 50px;
-
-      }
-
-    
-
-      .textkanan {
-
-        font-size: 24px;
-
-      }
-
-    
-
-      nav ul {
-
-        flex-direction: column;
-
-        align-items: center;
-
-      }
-
-    
-
-      nav li {
-
-        margin-right: 0;
-
-        margin-bottom: 10px;
-
-      }
-
-    
-
-      .hero {
-
-        height: auto;
-
-        padding: 30px 10px;
-
-      }
-
-    
-
-      .hero h1 {
-
-        font-size: 40px;
-
-      }
-
-    
-
-      .button-52 {
-
-        font-size: 12px;
-
-        padding: 10px 15px;
-
-        letter-spacing: 2px;
-
-      }
-
-    
-
-      .kontainer1 {
-
-        flex-direction: column;
-
-        align-items: center;
-
-      }
-
-    
-
-      .artikel {
-
-        width: 90%;
-
-      }
-
-    
-
-      .testimoni {
-
-        grid-template-columns: repeat(1, 1fr);
-
-        gap: 20px;
-
-      }
-
-    
-
-      .mapswrapper {
-
-        flex-direction: column;
-
-        width: 100%;
-
-        height: auto;
-
-        gap: 20px;
-
-        padding: 10px;
-
-      }
-
-    
-
-      .mapswrapper h1 {
-
-        font-size: 24px;
-
-        text-align: center;
-
-      }
-
-    
-
-      footer {
-
-        font-size: 12px;
-
-      }
-
-    
-
-      .media-sosial i {
-
-        font-size: 18px;
-
-      }
-
-    }
-
+@media only screen and (max-width: 450px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .textkanan {
+    font-size: 24px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .hero {
+    height: auto;
+    padding: 30px 10px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .button-52 {
+    font-size: 12px;
+    padding: 10px 15px;
+    letter-spacing: 2px;
+  }
+
+  .kontainer1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .artikel {
+    width: 90%;
+  }
+
+  .testimoni {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+
+  .mapswrapper {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .mapswrapper h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+
+  .media-sosial i {
+    font-size: 18px;
+  }
+}
     </style>
-
   </head>
 
-
-
   <body>
-
     <header>
-
       <div class="logo">
-
         <img src="logo.jpg" alt="Logo Cemilan Ceria" />
-
         <span class="textkanan">CEMILAN CERIA</span>
-
       </div>
-
       <nav>
-
         <ul>
-
           <li><a href="#">Beranda</a></li>
-
           <li><a href="#">Menu</a></li>
-
-          <li><a href="#">Testimoni</a></li>
-
+          <li><a href="#">testimoni</a></li>
           <li><a href="#">About</a></li>
-
         </ul>
-
       </nav>
-
     </header>
 
-
-
     <section class="hero">
-
       <h1>CEMILAN CERIA</h1>
-
       <!-- <p>Cemilan Renyah dan Enak untuk Setiap Kesempatan</p> -->
-
       <button class="button-52">Lihat Menu</button>
-
     </section>
 
-
-
     <div class="kontainer">
-
       <div class="kontainer1">
-
         <div class="artikel">
-
-          <img src="cireng.jpg" alt="Cireng" class="kgambar" />
-
+          <img src="cireng.jpg" alt="Cireng" class="kgambar">
           <div class="konten">
-
             <h2 class="judul">Cripik Pisang</h2>
-
             <p class="deskripsi">Rp5000</p>
-
             <a
-
               href="https://wa.me/085692517903?text=KAK BELI CRIPIK PISANG [`NOMINAL`]"
-
               class="kartu-tombol-beli"
-
-              >Habis</a
-
-            >
-
+              >Habis</a>
           </div>
-
         </div>
-
-      </div>
-
       <div class="artikel">
-
-        <img src="cireng.jpg" alt="Cireng" class="kgambar" />
-
+        <img src="cireng.jpg" alt="Cireng" class="kgambar">
         <div class="konten">
-
           <h2 class="judul">Cireng Isi Ayam Suir Pedas</h2>
-
           <p class="deskripsi">Rp3000</p>
-
           <a
-
             href="https://wa.me/085692517903?text=KAK BELI CIRENG [`NOMINAL`]"
-
             class="kartu-tombol-beli"
-
-            >Beli Sekarang</a
-
-          >
-
+            >Beli Sekarang</a>
         </div>
-
       </div>
-
-            <div class="artikel">
-
-
-
-        <img src="cireng.jpg" alt="Cireng" class="kgambar" />
-
-
-
-        <div class="konten">
-
-          <h2 class="judul">Cireng Isi Ayam Suir Pedas</h2>
-
-          <p class="deskripsi">Rp3000</p>
-
-          <a
-
-            href="https://wa.me/085692517903?text=KAK BELI CIRENG [`NOMINAL`]"
-
-            class="kartu-tombol-beli"
-
-            >Beli Sekarang</a
-
-          >
-
-        </div>
-
-      </div>
-
       <div class="artikel">
-
-        <img src="cireng.jpg" alt="Cireng" class="kgambar" />
-
+        <img src="cireng.jpg" alt="Cireng" class="kgambar">
         <div class="konten">
-
           <h2 class="judul">Lumpia Kering</h2>
-
           <p class="deskripsi">Rp4000</p>
-
           <a
-
             href="https://wa.me/085692517903?text=KAK BELI LUMPIA KERING [`NOMINAL`]"
-
             class="kartu-tombol-beli"
-
-            >Habis</a
-
-          >
-
+            >Habis</a>
         </div>
-
       </div>
-
+            <div class="artikel">
+        <img src="cireng.jpg" alt="Cireng" class="kgambar">
+        <div class="konten">
+          <h2 class="judul">Lumpia Kering</h2>
+          <p class="deskripsi">Rp4000</p>
+          <a
+            href="https://wa.me/085692517903?text=KAK BELI LUMPIA KERING [`NOMINAL`]"
+            class="kartu-tombol-beli"
+            >Habis</a>
+        </div>
+      </div>
     </div>
-
-
-
     <div class="testimoni">
-
       <div class="testi-kartu">
-
         <img src="testi1.png" alt="Pp" />
-
         <h2>OZAN</h2>
-
         <p class="testi"></p>
-
         <div class="rating">
-
           <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
-
         </div>
-
         <div class="icons"><span>🍴</span><span>🍊</span><span>🌿</span></div>
-
+      </div>
+      <div class="testi-kartu">
+        <img src="testi1.png" alt="Pp" />
+        <h2>RIVQI</h2>
+        <p class="testi"></p>
+        <div class="rating">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+        </div>
+        <div class="icons"><span>🍴</span><span>🍊</span><span>🌿</span></div>
       </div>
 
       <div class="testi-kartu">
-
         <img src="testi1.png" alt="Pp" />
-
-        <h2>ASA</h2>
-
+        <h2>ZEBIAN</h2>
         <p class="testi"></p>
-
         <div class="rating">
-
           <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
-
         </div>
-
         <div class="icons"><span>🍴</span><span>🍊</span><span>🌿</span></div>
-
       </div>
-
-
-
-      <div class="testi-kartu">
-
-        <img src="testi1.png" alt="Pp" />
-
-        <h2>VIRA</h2>
-
-        <p class="testi"></p>
-
-        <div class="rating">
-
-          <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
-
-        </div>
-
-        <div class="icons"><span>🍴</span><span>🍊</span><span>🌿</span></div>
-
-      </div>
-
     </div>
-
     <div class="mapswrapper">
-
       <h1>ALAMAT PRODUKSI</h1>
-
       <iframe
-
         loading="lazy"
-
         allowfullscreen
-
         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Jl.Baladewa%2C%20kp%20sukamana%2CRT%2003%2F03%2C%20kode%20pos%20%3A41373%2C%20kecamatan%20cikampek%2C%20kabupaten%20karawang&zoom=10&maptype=satellite"
-
       ></iframe>
-
     </div>
-
     <footer>
-
-      <p>&copy; Tugas PKK.</p>
-
+      <p>&copy; punya kin.</p>
       <div class="media-sosial">
-
         <a href="https://www.instagram.com/cemilanceeria/"
-
           ><i class="fab fa-instagram"></i
-
         ></a>
-
         <a href="https://wa.me/085891015129"><i class="fab fa-whatsapp"></i></a>
-
       </div>
-
     </footer>
-
   </body>
-
 </html>
