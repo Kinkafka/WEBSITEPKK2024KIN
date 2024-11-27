@@ -6,7 +6,7 @@
     <title>Cemilan Ceria</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
       <link
       rel="preconnect"
       href="https://fonts.googleapis.com"
@@ -69,6 +69,29 @@
         height: 70px;
         border-radius: 50%;
       }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+      }
+      
+      .hamburger .bar {
+        width: 30px;
+        height: 3px;
+        background-color: #000;
+        transition: all 2s ease;
+      }
+      
+      #nav-menu {
+        display: flex;
+        flex-direction: row;
+      }
+      
+      #nav-menu ul {
+        flex-direction: row;
+      }
+      
 
       nav ul {
         list-style: none;
@@ -344,91 +367,133 @@
         padding: 20px;
         position: relative;
       }
-@media only screen and (max-width: 450px) {
-  body {
-    font-size: 14px;
-    background-image: none;
-    background-color: lightgoldenrodyellow;
-  }
+      @media only screen and (max-width: 768px) {
+        .hamburger {
+          display: flex;
+        }
+      
+        #nav-menu {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 70px;
+          left: 0;
+          width: 100%;
+          background-color: #703d3d;
+          z-index: 10;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+      
+        #nav-menu.show {
+          display: flex;
+        }
+      
+        #nav-menu ul {
+          flex-direction: column;
+          margin: 0;
+          padding: 0;
+        }
+      
+        #nav-menu li {
+          text-align: center;
+          margin: 10px 0;
+        }
+      
+        #nav-menu a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+      .hero.menu-open {
+        margin-top: 196px;
+        transition: margin-top 1s ease;
+      }
 
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .logo img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .textkanan {
-    font-size: 24px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav li {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .hero {
-    height: auto;
-    padding: 30px 10px;
-  }
-
-  .hero h1 {
-    font-size: 40px;
-  }
-
-  .button-52 {
-    font-size: 12px;
-    padding: 10px 15px;
-    letter-spacing: 2px;
-  }
-
-  .kontainer1 {
-    flex-direction: column;
-    align-items: center;
-  }
-  .texttesti{
-    font-size: 50px;
-  }
-
-  .artikel {
-    width: 300px;
-    height: 360px;
-  }
-
-  .testimoni {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-  }
-
-  .mapswrapper {
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    gap: 20px;
-    padding: 10px;
-  }
-
-  .mapswrapper h1 {
-    font-size: 24px;
-    text-align: center;
-  }
-
-  footer {
-    font-size: 12px;
-  }
-
-  .media-sosial i {
-    font-size: 18px;
-  }
-}
+      body {
+        font-size: 14px;
+        background-image: none;
+        background-color: lightgoldenrodyellow;
+      }
+    
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .logo img {
+        width: 50px;
+        height: 50px;
+      }
+    
+      .textkanan {
+        font-size: 24px;
+      }
+      nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    
+      .hero {
+        height: auto;
+        padding: 30px 10px;
+      }
+    
+      .hero h1 {
+        font-size: 40px;
+      }
+    
+      .button-52 {
+        font-size: 12px;
+        padding: 10px 15px;
+        letter-spacing: 2px;
+      }
+    
+      .kontainer1 {
+        flex-direction: column;
+        align-items: center;
+      }
+      .texttesti{
+        font-size: 50px;
+      }
+    
+      .artikel {
+        width: 300px;
+        height: 360px;
+      }
+    
+      .testimoni {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+      }
+    
+      .mapswrapper {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 20px;
+        padding: 10px;
+      }
+    
+      .mapswrapper h1 {
+        font-size: 24px;
+        text-align: center;
+      }
+    
+      footer {
+        font-size: 12px;
+      }
+    
+      .media-sosial i {
+        font-size: 18px;
+      }
+    }
     </style>
   </head>
 
@@ -438,7 +503,10 @@
         <img src="logo.jpg" alt="Logo Cemilan Ceria" />
         <span class="textkanan">CEMILAN CERIA</span>
       </div>
-      <nav>
+      <div class="hamburger" id="hamburger-icon">
+        <span class="bar"></span>
+      </div>
+      <nav id="nav-menu">
         <ul>
           <li><a href="#">Beranda</a></li>
           <li><a href="#">Menu</a></li>
@@ -549,5 +617,15 @@
         <a href="https://wa.me/085891015129"><i class="fab fa-whatsapp"></i></a>
       </div>
     </footer>
+    <script>
+  const hamburger = document.getElementById("hamburger-icon");
+  const navMenu = document.getElementById("nav-menu");
+  const heroSection = document.querySelector(".hero");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("show"); 
+    heroSection.classList.toggle("menu-open"); 
+  });
+</script>
   </body>
 </html>
