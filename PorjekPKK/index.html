@@ -1,1127 +1,560 @@
- <!DOCTYPE html>
-
-
+<!DOCTYPE html>
 
 <html lang="id">
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-
-  <head>
-
-    <meta charset="UTF-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Cemilan Ceria</title>
-
-    <link
-
-      rel="stylesheet"
-
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
-
-      <link
-
-      rel="preconnect"
-
-      href="https://fonts.googleapis.com"
-
-    />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link
-
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik+Wet+Paint&display=swap"
-
-      rel="stylesheet"
-
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link
-
-      href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik+Wet+Paint&display=swap"
-
-      rel="stylesheet"
-
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link
-
-      href="https://fonts.googleapis.com/css2?family=Caudex&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik+Wet+Paint&display=swap"
-
-      rel="stylesheet"
-
-    />
-
-    <style>
-
+  <title>Cemilan Ceria</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik+Wet+Paint&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik+Wet+Paint&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caudex&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik+Wet+Paint&display=swap"
+    rel="stylesheet" />
+  <style>
     html {
+      scroll-behavior: smooth;
+    }
 
-  scroll-behavior: smooth;
+    html,
+    body {
+      height: 100%;
+    }
 
-}
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      /* background-color: #a39874; */
+      background-image: url(https://img.freepik.com/free-vector/seamless-pizza-ingredients_1176-269.jpg?t=st=1732850617~exp=1732854217~hmac=6a90a2ec832fead9dc928a06f46ac548343f800e38627d42575c702c173219aa&w=740);
+      background-size: cover;
+    }
 
-    html,body{
+    header {
+      background-color: #000000;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+    }
 
-      height:100%;
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .textkanan {
+      font-size: 40px;
+      font-family: "Poppins", sans-serif;
+      /* font-style: italic; */
+      color: rgb(255, 255, 255);
+      padding-left: 10px;
+      font-weight: bold;
+    }
+
+    .logo img {
+      width: 110px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    nav li {
+      margin-right: 20px;
+    }
+
+    nav a {
+      display: inline-block;
+      font-family: "Poppins", sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 20px;
+      transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 
     }
 
+    nav a:hover {
+      color: #fff;
+      background-color: #caff37;
+      -webkit-text-stroke: 0.4px black;
+      transform: scale(1.1);
+    }
+
+    nav a:active {
+      transform: scale(0.95);
+    }
+
+    .hero {
+      text-align: center;
+      color: ghostwhite;
+      padding: 50px 20px;
+      background-image: url("https://uptown.id/wp-content/uploads/2020/01/Salad-Buah-14-Cemilan-Sehat-Yang-Sebaiknya-Tersedia-di-Meja-Kantor.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+
+    .hero h1 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400 bold;
+      font-style: normal;
+      font-size: 65px;
+      margin-top: 100px;
+      color: #ffffff;
+      /* -webkit-text-stroke: 0.4px black; */
+      /* text-shadow: 0 5px 20px black; */
+    }
+
+    .hero p {
+      font-weight: bold;
+      font-family: "Poppins", sans-serif;
+      font-size: 25px;
+      color: rgb(238, 235, 64);
+      -webkit-text-stroke: 0.3px black;
+      text-decoration: underline 0.4px white;
+      /* text-shadow: 0 5px 20px black; */
+    }
+
+    /* nagian tombol */
+    .button-52 {
+      font-size: 16px;
+      font-weight: 200;
+      letter-spacing: 9px;
+      background-color: rgba(0, 0, 0, 0);
+      padding: 13px 20px;
+      border: 1px solid black;
+      position: relative;
+      margin-top: 20px;
+    }
+
+    .button-52:hover {
+      background-color: rgb(255, 0, 0);
+    }
+
+    .kontainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 30px auto;
+    }
+
+    .kontainer1 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      /* max-width: 1200px; */
+    }
+
+    .artikel {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin: 15px;
+      overflow: hidden;
+      transition: transform 0.2s;
+      width: 350px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .artikel:hover {
+      transform: scale(1.05);
+    }
+
+    .kgambar {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .konten {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .judul {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .deskripsi {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .kartu-tombol-beli {
+      display: inline-block;
+      background-color: #703d3d;
+      color: #fff;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 15px;
+      width: 100%;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .kartu-tombol-beli:hover {
+      background-color: #ffe54c;
+    }
+
+    .media-sosial {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .media-sosial a {
+      text-decoration: none;
+    }
+
+    .media-sosial i {
+      font-size: 24px;
+      color: #fff;
+      transition: color 0.3s;
+    }
+
+    .media-sosial i:hover {
+      color: #ccc;
+    }
+
+    .testimoni {
+      display: grid;
+      margin: auto;
+      margin-top: 1rem;
+      width: fit-content;
+      height: auto;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 80px;
+      max-width: 1200px;
+    }
+
+    .texttesti {
+      text-align: center;
+      font-family: "Poppins", sans-serif;
+      color: whitesmoke;
+      font-weight: bold;
+      font-size: 100px;
+      -webkit-text-stroke: 0.5px black;
+    }
+
+    .testi-kartu {
+      background-color: #ffffff;
+      border: 1px solid #e3e1dd;
+      border-radius: 10px;
+      padding: 20px;
+      width: 270px;
+      height: 330px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .testi-kartu h2 {
+      font-size: 20px;
+      color: #d95b00;
+    }
+
+    .testi-kartu img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    .testi {
+      font-size: 19px;
+      margin-bottom: 25px;
+      color: #555555;
+    }
+
+    .rating {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .rating span {
+      font-size: 18px;
+      color: #ffcc00;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 10px;
+      font-size: 16px;
+      color: #d95b00;
+    }
+
+    .mapswrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+      padding: 15px;
+      width: 1000px;
+      height: 300px;
+      gap: 55px;
+    }
+
+    .mapswrapper iframe {
+      box-shadow: 9px 7px 7px black;
+      border-radius: 20px;
+      width: 50%;
+      max-width: 600px;
+      height: 100%;
+      max-height: 300px;
+    }
+
+    .mapswrapper h1 {
+      color: ghostwhite;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400 bold;
+      font-style: normal;
+      font-size: 65px;
+      /* -webkit-text-stroke: 0.5px black;
+        text-shadow: 0 5px 20px black; */
+      max-width: 300px;
+    }
+
+    footer {
+      background-color: #000000;
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    @media only screen and (max-width: 450px) {
       body {
-
-        margin: 0;
-
-        padding: 0;
-
-        font-family: Arial, sans-serif;
-
-        /* background-color: #a39874; */
-
-        background-image: url(https://img.freepik.com/free-vector/seamless-pizza-ingredients_1176-269.jpg?t=st=1732850617~exp=1732854217~hmac=6a90a2ec832fead9dc928a06f46ac548343f800e38627d42575c702c173219aa&w=740);
-
-        background-size: cover;
-
+        font-size: 14px;
       }
-
-
 
       header {
-
-        background-color: #000000;
-
-        padding: 20px;
-
         display: flex;
-
-        justify-content: space-between;
-
+        flex-direction: column;
         align-items: center;
-
-        position: sticky;
-
       }
-
-
-
-      .logo {
-
-        display: flex;
-
-        align-items: center;
-
-      }
-
-
-
-      .textkanan {
-
-        font-size: 40px;
-
-        font-family: "Poppins", sans-serif;
-
-        /* font-style: italic; */
-
-        color: rgb(255, 255, 255);
-
-        padding-left: 10px;
-
-        font-weight: bold;
-
-      }
-
-
 
       .logo img {
-
-        width: 110px;
-
-        height: 100px;
-
-        border-radius: 50%;
-
+        width: 50px;
+        height: 50px;
       }
 
-
+      .textkanan {
+        font-size: 24px;
+      }
 
       nav ul {
-
-        list-style: none;
-
-        margin: 0;
-
-        padding: 0;
-
         display: flex;
-
+        flex-direction: column;
         align-items: center;
-
       }
-
-
 
       nav li {
-
-        margin-right: 20px;
-
-      }
-
-
-
-      nav a {
-
-        display: inline-block;
-
-        font-family: "Poppins", sans-serif;
-
-        font-weight: bold;
-
-        font-size: 20px;
-
-        color: #ffffff;
-
-        text-decoration: none;
-
-        padding: 10px 20px;
-
-        transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
-
-
-
-      }
-
-
-
-      nav a:hover {
-
-        color: #fff;
-
-        background-color: #caff37;
-
-        -webkit-text-stroke: 0.4px black;
-
-        transform: scale(1.1);
-
-      }
-
-
-
-      nav a:active {
-
-        transform: scale(0.95); 
-
+        margin-right: 0;
+        margin-bottom: 10px;
       }
 
       .hero {
-
-        text-align: center;
-
-        color: ghostwhite;
-
-        padding: 50px 20px;
-
-        background-image: url("https://uptown.id/wp-content/uploads/2020/01/Salad-Buah-14-Cemilan-Sehat-Yang-Sebaiknya-Tersedia-di-Meja-Kantor.jpg");
-
-        background-size: cover;
-
-        background-position: center;
-
-        height: 400px;
-
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-
-        position: relative;
-
+        height: auto;
+        padding: 30px 10px;
       }
-
-
 
       .hero h1 {
-
-        font-family: "Poppins", sans-serif;
-
-        font-weight: 400 bold;
-
-        font-style: normal;
-
-        font-size: 65px;
-
-        margin-top: 100px;
-
-        color: #ffffff;
-
-        /* -webkit-text-stroke: 0.4px black; */
-
-        /* text-shadow: 0 5px 20px black; */
-
+        font-size: 40px;
       }
-
-
-
-      .hero p {
-
-        font-weight: bold;
-
-        font-family: "Poppins", sans-serif;
-
-        font-size: 25px;
-
-        color: rgb(238, 235, 64);
-
-        -webkit-text-stroke: 0.3px black;
-
-        text-decoration: underline 0.4px white;
-
-        /* text-shadow: 0 5px 20px black; */
-
-      }
-
-
-
-      /* nagian tombol */
 
       .button-52 {
-
-        font-size: 16px;
-
-        font-weight: 200;
-
-        letter-spacing: 9px;
-
-        background-color: rgba(0, 0, 0, 0);
-
-        padding: 13px 20px;
-
-        border: 1px solid black;
-
-        position: relative;
-
-        margin-top: 20px;
-
+        font-size: 12px;
+        padding: 10px 15px;
+        letter-spacing: 2px;
       }
-
-      .button-52:hover {
-
-        background-color: rgb(255, 0, 0);
-
-      }
-
-
-
-      .kontainer {
-
-        display: flex;
-
-        flex-wrap: wrap;
-
-        justify-content: center;
-
-        margin: 30px auto;
-
-      }
-
-
 
       .kontainer1 {
-
-        display: flex;
-
-        flex-wrap: wrap;
-
-        justify-content: center;
-
-        /* max-width: 1200px; */
-
+        flex-direction: column;
+        align-items: center;
       }
 
-
+      .texttesti {
+        font-size: 50px;
+      }
 
       .artikel {
-
-        background: #fff;
-
-        border-radius: 10px;
-
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-        margin: 15px;
-
-        overflow: hidden;
-
-        transition: transform 0.2s;
-
-        width: 350px;
-
-        padding: 15px;
-
-        display: flex;
-
-        flex-direction: column;
-
-      }
-
-
-
-      .artikel:hover {
-
-        transform: scale(1.05);
-
-      }
-
-
-
-      .kgambar {
-
-        width: 100%;
-
-        height: 200px;
-
-        object-fit: cover;
-
-        border-radius: 10px;
-
-      }
-
-
-
-      .konten {
-
-        padding: 15px;
-
-        display: flex;
-
-        flex-direction: column;
-
-        flex-grow: 1;
-
-      }
-
-
-
-      .judul {
-
-        font-size: 20px;
-
-        font-weight: bold;
-
-        margin: 0;
-
-      }
-
-
-
-      .deskripsi {
-
-        font-size: 14px;
-
-        color: #555;
-
-      }
-
-
-
-      .kartu-tombol-beli {
-
-        display: inline-block;
-
-        background-color: #703d3d;
-
-        color: #fff;
-
-        padding: 10px 20px;
-
-        text-align: center;
-
-        text-decoration: none;
-
-        border-radius: 5px;
-
-        margin-top: 15px;
-
-        width: 100%;
-
-        font-weight: bold;
-
-        transition: background-color 0.3s;
-
-      }
-
-
-
-      .kartu-tombol-beli:hover {
-
-        background-color: #ffe54c;
-
-      }
-
-
-
-      .media-sosial {
-
-        display: flex;
-
-        justify-content: center;
-
-        gap: 15px;
-
-        margin-top: 10px;
-
-      }
-
-
-
-      .media-sosial a {
-
-        text-decoration: none;
-
-      }
-
-
-
-      .media-sosial i {
-
-        font-size: 24px;
-
-        color: #fff;
-
-        transition: color 0.3s;
-
-      }
-
-
-
-      .media-sosial i:hover {
-
-        color: #ccc;
-
+        width: 300px;
+        height: 360px;
       }
 
       .testimoni {
-
-        display: grid;
-
-        margin: auto;
-
-        margin-top: 1rem;
-
-        width: fit-content;
-
-        height: auto;
-
-        grid-template-columns: repeat(3, 1fr);
-
-        gap: 80px;
-
-        max-width: 1200px;
-
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
       }
-
-      .texttesti{
-
-        text-align: center;
-
-        font-family: "Poppins", sans-serif;
-
-        color: whitesmoke;
-
-        font-weight: bold;
-
-        font-size: 100px;
-
-        -webkit-text-stroke: 0.5px black;
-
-      }
-
-
-
-      .testi-kartu {
-
-        background-color: #ffffff;
-
-        border: 1px solid #e3e1dd;
-
-        border-radius: 10px;
-
-        padding: 20px;
-
-        width: 270px;
-
-        height: 330px;
-
-        text-align: center;
-
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-      }
-
-
-
-      .testi-kartu h2 {
-
-        font-size: 20px;
-
-        color: #d95b00;
-
-      }
-
-
-
-      .testi-kartu img {
-
-        width: 100px;
-
-        height: 100px;
-
-        object-fit: cover;
-
-      }
-
-
-
-      .testi {
-
-        font-size: 19px;
-
-        margin-bottom: 25px;
-
-        color: #555555;
-
-      }
-
-
-
-      .rating {
-
-        display: flex;
-
-        justify-content: center;
-
-        gap: 5px;
-
-      }
-
-
-
-      .rating span {
-
-        font-size: 18px;
-
-        color: #ffcc00;
-
-      }
-
-
-
-      .icons {
-
-        display: flex;
-
-        justify-content: space-around;
-
-        margin-top: 10px;
-
-        font-size: 16px;
-
-        color: #d95b00;
-
-      }
-
-
 
       .mapswrapper {
-
-        display: flex;
-
-        justify-content: center;
-
-        align-items: center;
-
-        margin: 20px auto;
-
-        padding: 15px;
-
-        width: 1000px;
-
-        height: 300px;
-
-        gap: 55px;
-
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 20px;
+        padding: 10px;
       }
-
-
-
-      .mapswrapper iframe {
-
-        box-shadow: 9px 7px 7px black;
-
-        border-radius: 20px;
-
-        width: 50%;
-
-        max-width: 600px;
-
-        height: 100%;
-
-        max-height: 300px;
-
-      }
-
-
 
       .mapswrapper h1 {
-
-        color: ghostwhite;
-
-        font-family: "Poppins", sans-serif;
-
-        font-weight: 400 bold;
-
-        font-style: normal;
-
-        font-size: 65px;
-
-        /* -webkit-text-stroke: 0.5px black;
-
-        text-shadow: 0 5px 20px black; */
-
-        max-width: 300px;
-
+        font-size: 24px;
+        text-align: center;
       }
 
       footer {
-
-        background-color: #000000;
-
-        color: #fff;
-
-        width:100%;
-
-        text-align: center;
-
-        padding: 20px;
-
-        position: relative;
-
+        font-size: 12px;
       }
 
-@media only screen and (max-width: 450px) {
-
-  body {
-
-    font-size: 14px;
-
-  }
-
-
-
-  header {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-  }
-
-
-
-  .logo img {
-
-    width: 50px;
-
-    height: 50px;
-
-  }
-
-
-
-  .textkanan {
-
-    font-size: 24px;
-
-  }
-
-
-
-  nav ul {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-  }
-
-
-
-  nav li {
-
-    margin-right: 0;
-
-    margin-bottom: 10px;
-
-  }
-
-
-
-  .hero {
-
-    height: auto;
-
-    padding: 30px 10px;
-
-  }
-
-
-
-  .hero h1 {
-
-    font-size: 40px;
-
-  }
-
-
-
-  .button-52 {
-
-    font-size: 12px;
-
-    padding: 10px 15px;
-
-    letter-spacing: 2px;
-
-  }
-
-
-
-  .kontainer1 {
-
-    flex-direction: column;
-
-    align-items: center;
-
-  }
-
-  .texttesti{
-
-    font-size: 50px;
-
-  }
-
-
-
-  .artikel {
-
-    width: 300px;
-
-    height: 360px;
-
-  }
-
-
-
-  .testimoni {
-
-    grid-template-columns: repeat(1, 1fr);
-
-    gap: 20px;
-
-  }
-
-
-
-  .mapswrapper {
-
-    flex-direction: column;
-
-    width: 100%;
-
-    height: auto;
-
-    gap: 20px;
-
-    padding: 10px;
-
-  }
-
-
-
-  .mapswrapper h1 {
-
-    font-size: 24px;
-
-    text-align: center;
-
-  }
-
-
-
-  footer {
-
-    font-size: 12px;
-
-  }
-
-
-
-  .media-sosial i {
-
-    font-size: 18px;
-
-  }
-
-}
-
-    </style>
-
-  </head>
-
-
-
-  <body>
-
-    <header>
-
-      <div class="logo">
-
-        <img src="https://raw.githubusercontent.com/Absozoft/ProjekPKK/refs/heads/main/ProjekPKK-Zeb/logocireng.png" alt="Logo Cemilan Ceria" />
-
-        <span class="textkanan"><span style="color: rgb(240, 255, 103);">CEMILAN</span> CERIA</span>
-
-      </div>
-
-      <nav>
-
-        <ul>
-
-          <li><a href="#beranda">Beranda</a></li>
-
-          <li><a href="#menu">Menu</a></li>
-
-          <li><a href="#testii">Testimoni</a></li>
-
-          <li><a href="#about">About</a></li>
-
-        </ul>
-
-      </nav>
-
-    </header>
-
-
-
-    <section id="beranda" class="hero">
-
-      <h1><span style="color: rgb(240, 255, 103);">CEMILAN</span> CERIA</h1>
-
-      <!-- <p>Cemilan Renyah dan Enak untuk Setiap Kesempatan</p> -->
-
-      <a href="#menu"><button class="button-52">Lihat Menu</button></a>
-
-    </section>
-
-
-
-    <div id="menu" class="kontainer">
-
-      <div class="kontainer1">
-
-        <div class="artikel">
-
-          <img src="Produsen-Keripik-Pisang-1024x622-removebg-preview.png" alt="Cireng" class="kgambar">
-
-          <div class="konten">
-
-            <h2 class="judul">Cripik Pisang</h2>
-
-            <p class="deskripsi">Rp5000</p>
-
-            <a
-
-              href=""
-
-              class="kartu-tombol-beli"
-
-              >COMING SOON</a>
-
-          </div>
-
-        </div>
-
+      .media-sosial i {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/Absozoft/ProjekPKK/refs/heads/main/ProjekPKK-Zeb/logocireng.png"
+        alt="Logo Cemilan Ceria" />
+      <span class="textkanan"><span style="color: rgb(240, 255, 103);">CEMILAN</span> CERIA</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#testii">Testimoni</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="beranda" class="hero">
+    <h1><span style="color: rgb(240, 255, 103);">CEMILAN</span> CERIA</h1>
+    <!-- <p>Cemilan Renyah dan Enak untuk Setiap Kesempatan</p> -->
+    <button class="button-52">Lihat Menu</button>
+  </section>
+
+  <div id="menu" class="kontainer">
+    <div class="kontainer1">
       <div class="artikel">
-
-        <img src="262__1_-removebg-preview.png" alt="Cireng" class="kgambar">
-
+        <img src="Produsen-Keripik-Pisang-1024x622-removebg-preview.png" alt="Cireng" class="kgambar">
         <div class="konten">
-
+          <h2 class="judul">Cripik Pisang</h2>
+          <p class="deskripsi">Rp5000</p>
+          <a href="https://wa.me/085692517903?text=KAK BELI CRIPIK PISANG [NOMINAL]" class="kartu-tombol-beli">COMING
+            SOON</a>
+        </div>
+      </div>
+      <div class="artikel">
+        <img src="262_1-removebg-preview.png" alt="Cireng" class="kgambar">
+        <div class="konten">
           <h2 class="judul">Cireng Isi Ayam Suir Pedas</h2>
-
           <p class="deskripsi">Rp3000</p>
-
-          <a
-
-            href="https://wa.me/6285692517903?text=KAK BELI CIRENG [`NOMINAL`]"
-
-            class="kartu-tombol-beli"
-
-            >Beli Sekarang</a>
-
+          <a href="https://wa.me/085692517903?text=KAK BELI CIRENG [NOMINAL]" class="kartu-tombol-beli">Beli
+            Sekarang</a>
         </div>
-
       </div>
-
-            <div class="artikel">
-
+      <div class="artikel">
         <img src="basreng-removebg-preview.png" alt="Cireng" class="kgambar">
-
         <div class="konten">
-
-          <h2 class="judul">Basreng</h2>
-
+          <h2 class="judul">Lumpia Kering</h2>
           <p class="deskripsi">Rp4000</p>
-
-          <a
-
-            href=""
-
-            class="kartu-tombol-beli"
-
-            >COMING SOON</a>
-
+          <a href="https://wa.me/085692517903?text=KAK BELI LUMPIA KERING [NOMINAL]" class="kartu-tombol-beli">COMING
+            SOON</a>
         </div>
-
       </div>
-
     </div>
-
-          <h1 id="testii" class="texttesti">TESTIMONI</h1>
-
+    <h1 id="testii" class="texttesti">TESTIMONI</h1>
     <div class="testimoni">
-
       <div class="testi-kartu">
-
         <img src="d71907754087ea0e4b584eabdfc32304-removebg-preview.png" alt="Pp" />
-
         <h2>OZAN</h2>
-
         <p class="testi">ADMIN FAST RESPON CIRENGNYA ENAK</p>
-
         <div class="rating">
-
           <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
-
         </div>
-
         <div class="icons"><span>🍴</span><span>🍊</span><span>🌿</span></div>
-
       </div>
-
       <div class="testi-kartu">
-
         <img src="d71907754087ea0e4b584eabdfc32304-removebg-preview.png" alt="Pp" />
-
         <h2>RIVQI</h2>
-
         <p class="testi">CIRENGNYA ENAK,TAPI KUHARAP ADA VERSI NON-PEDAS</p>
-
         <div class="rating">
-
           <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
-
         </div>
-
         <div class="icons"><span>🍴</span><span>🍊</span><span>🌿</span></div>
-
       </div>
-
-
 
       <div class="testi-kartu">
-
         <img src="d71907754087ea0e4b584eabdfc32304-removebg-preview.png" alt="Pp" />
-
         <h2>ZEBIAN</h2>
-
         <p class="testi">CIRENGNYA ENAK GAN PEDASNYA PAS DAN CIRENGNYA BESAR</p>
-
         <div class="rating">
-
           <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
-
         </div>
-
         <div class="icons"><span>🍴</span><span>🍊</span><span>🌿</span></div>
-
       </div>
-
     </div>
-
     <div class="mapswrapper">
-
       <h1>ALAMAT PRODUKSI</h1>
-
-      <iframe
-
-        loading="lazy"
-
-        allowfullscreen
-
-        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Jl.Baladewa%2C%20kp%20sukamana%2CRT%2003%2F03%2C%20kode%20pos%20%3A41373%2C%20kecamatan%20cikampek%2C%20kabupaten%20karawang&zoom=10&maptype=satellite"
-
-      ></iframe>
-
+      <iframe loading="lazy" allowfullscreen
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Jl.Baladewa%2C%20kp%20sukamana%2CRT%2003%2F03%2C%20kode%20pos%20%3A41373%2C%20kecamatan%20cikampek%2C%20kabupaten%20karawang&zoom=10&maptype=satellite"></iframe>
     </div>
+    <footer id="about">
+      <p>&copy; punya kin.</p>
+      <div class="media-sosial">
+        <a href="https://www.instagram.com/cemilanceeria/">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/085891015129">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="mailto:cemilanceeria@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.youtube.com/@CemilanCeria">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.facebook.com/share/15quzymU2T/">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </div>
+    </footer>
+</body>
 
-<footer id="about">
-
-  <p>Media Sosial</p>
-
-  <div class="media-sosial">
-
-    <a href="https://www.instagram.com/cemilanceeria/">
-
-      <i class="fab fa-instagram"></i>
-
-    </a>
-
-    <a href="https://wa.me/085891015129">
-
-      <i class="fab fa-whatsapp"></i>
-
-    </a>
-
-    <a href="mailto:cemilanceeria@gmail.com">
-
-      <i class="fas fa-envelope"></i>
-
-    </a>
-
-    <a href="https://www.youtube.com/@CemilanCeria">
-
-      <i class="fab fa-youtube"></i>
-
-    </a>
-
-    <a href="https://www.facebook.com/share/15quzymU2T/">
-
-      <i class="fab fa-facebook"></i>
-
-    </a>
-
-  </div>
-
-</footer>
-
-  </body>
-
-                </html>
+</html>
