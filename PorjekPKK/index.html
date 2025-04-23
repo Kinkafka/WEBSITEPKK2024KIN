@@ -76,7 +76,7 @@
       margin: 0;
       padding: 0;
       display: flex;
-      align-items: center;
+      align-items: left;
     }
 
     nav li {
@@ -110,28 +110,28 @@
       text-align: center;
       color: ghostwhite;
       padding: 50px 20px;
-      background-image: url("https://uptown.id/wp-content/uploads/2020/01/Salad-Buah-14-Cemilan-Sehat-Yang-Sebaiknya-Tersedia-di-Meja-Kantor.jpg");
+      background-image: url("https://github.com/Kinkafka/WEBSITEPKK2024KIN/blob/main/PorjekPKK/hq720%20(1).jpg?raw=true");
       background-size: cover;
       background-position: center;
-      height: 400px;
+      height: 450px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       position: relative;
     }
 
     .hero h1 {
-      font-family: "Poppins", sans-serif;
+      /* font-family: "Poppins", sans-serif; */
       font-weight: 400 bold;
       font-style: normal;
       font-size: 65px;
       margin-top: 100px;
       color: #ffffff;
       /* -webkit-text-stroke: 0.4px black; */
-      /* text-shadow: 0 5px 20px black; */
+      text-shadow: 0 5px 5px black;
     }
 
     .hero p {
       font-weight: bold;
-      font-family: "Poppins", sans-serif;
+      font-family: monospace;
       font-size: 25px;
       color: rgb(238, 235, 64);
       -webkit-text-stroke: 0.3px black;
@@ -144,7 +144,7 @@
       font-size: 16px;
       font-weight: 200;
       letter-spacing: 9px;
-      background-color: rgba(0, 0, 0, 0);
+      background-color: rgb(255, 255, 255);
       padding: 13px 20px;
       border: 1px solid black;
       position: relative;
@@ -152,8 +152,47 @@
     }
 
     .button-52:hover {
-      background-color: rgb(255, 0, 0);
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 4px #ff0000;
+    transition: 0.7s;
     }
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    /* lupa nama pokoknya kotak */
+    #toggle:checked ~ .overlay {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .overlay-content {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .close-btn {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    
 
     .kontainer {
       display: flex;
@@ -466,11 +505,49 @@
     </nav>
   </header>
 
+  <input type="checkbox" id="toggle" hidden>
+
+
   <section id="beranda" class="hero">
-    <h1><span style="color: rgb(240, 255, 103);">CEMILAN</span> CERIA</h1>
+    <h1><span style="color: rgb(240, 255, 103);font-family: Verdana, Geneva, Tahoma, sans-serif;">CEMILAN</span> CERIA</h1>
     <!-- <p>Cemilan Renyah dan Enak untuk Setiap Kesempatan</p> -->
-    <button class="button-52">Lihat Menu</button>
+    <label for="toggle" class="button-52" style="color: black;">BELI SEKARANG</label>
   </section>
+
+  <div class="overlay">
+    <div class="overlay-content">
+      <p>SILAKAN DIISI</p>
+      <label for="jumlah">Jumlah barang:</label><br>
+      <select id="jumlah" name="jumlah" style="margin-top: 8px; padding: 6px; width: 100%;">
+        <option value="1">1 pcs</option>
+        <option value="2">2 pcs</option>
+        <option value="3">3 pcs</option>
+        <option value="4">4 pcs</option>
+        <option value="5">5 pcs</option>
+        <option value="6">6 pcs</option>
+        <option value="7">7 pcs</option>
+        <option value="8">8 pcs</option>
+        <option value="9">9 pcs</option>
+        <option value="10">10 pcs</option>
+      </select>
+
+      <a href="#" id="waLink" target="_blank"
+       style="
+         display: inline-block;
+         margin-top: 16px;
+         padding: 10px 20px;
+         background-color: #28a745;
+         color: white;
+         text-decoration: none;
+         border-radius: 8px;
+         font-weight: bold;
+       ">
+      BELI SEKARANG
+    </a>
+    </div>
+  </div>
+
+  <h1 style="color: #ffffff;text-align: center;gap: 10px;font-size: 100px;">MENU</h1>
 
   <div id="menu" class="kontainer">
     <div class="kontainer1">
@@ -542,7 +619,7 @@
         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Jl.Baladewa%2C%20kp%20sukamana%2CRT%2003%2F03%2C%20kode%20pos%20%3A41373%2C%20kecamatan%20cikampek%2C%20kabupaten%20karawang&zoom=10&maptype=satellite"></iframe>
     </div>
     <footer id="about">
-      <p>&copy; punya kin.</p>
+      <p>&copy; admin.</p>
       <div class="media-sosial">
         <a href="https://www.instagram.com/cemilanceeria/">
           <i class="fab fa-instagram"></i>
@@ -561,6 +638,20 @@
         </a>
       </div>
     </footer>
+
+    <script>
+      const select = document.getElementById('jumlah');
+      const waLink = document.getElementById('waLink');
+  
+      waLink.addEventListener('click', function (e) {
+        e.preventDefault(); 
+        const jumlah = select.value;
+        const pesan = `Kak saya beli cireng ${jumlah} pcs`;
+        const nomorWA = '6285891015129'; 
+        const link = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
+        window.open(link, '_blank');
+      });
+    </script>
 </body>
 
 </html>
