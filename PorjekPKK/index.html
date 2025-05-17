@@ -154,7 +154,6 @@
     .button-52:hover {
     outline-color: transparent;
     outline-style:solid;
-    box-shadow: 0 0 0 4px #ff0000;
     transition: 0.7s;
     }
     .overlay {
@@ -254,18 +253,28 @@
     
 
     .kartu-tombol-beli {
-      display: inline-block;
-      background-color: #703d3d;
-      color: #fff;
-      padding: 10px 20px;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 15px;
-      width: 100%;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 15px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.kartu-tombol-beli:hover {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
     .kartu-tombol-beli:hover {
       background-color: #ffe54c;
@@ -500,7 +509,7 @@
         <li><a href="#beranda">Beranda</a></li>
         <li><a href="#menu">Menu</a></li>
         <li><a href="#testii">Testimoni</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#about">Address</a></li>
       </ul>
     </nav>
   </header>
@@ -514,8 +523,11 @@
     <label for="toggle" class="button-52" style="color: black;">BELI SEKARANG</label>
   </section>
 
-  <div class="overlay">
-    <div class="overlay-content">
+  <div class="overlay" id="overlay">
+    <div class="overlay-content" id="popupBox">
+
+<button id="closeOverlay" class="close-btn">X</button>
+
       <p>SILAKAN DIISI</p>
       <label for="jumlah">Jumlah barang:</label><br>
       <select id="jumlah" name="jumlah" style="margin-top: 8px; padding: 6px; width: 100%;">
@@ -557,8 +569,7 @@
           <h2 class="judul">Cripik Pisang</h2>
           <!-- <p class="deskripsi1">Rp####</p> -->
           <p class="deskripsi">Keripik pisang original adalah camilan renyah dengan rasa alami pisang tanpa tambahan bumbu, cocok untuk dinikmati sebagai teman santai.</p>
-          <a href="https://wa.me/085692517903?text=KAK BELI CRIPIK PISANG [NOMINAL]" class="kartu-tombol-beli">COMING
-            SOON</a>
+          <a href="#" class="kartu-tombol-beli coming-soon">COMING SOON</a>
         </div>
       </div>
       <div class="artikel">
@@ -577,8 +588,7 @@
           <h2 class="judul">Basreng</h2>
           <!-- <p class="deskripsi1">Rp####</p> -->
           <p class="deskripsi">Basreng adalah camilan gurih yang terbuat dari irisan bakso yang digoreng hingga renyah,pilihan favorit untuk camilan sehari-hari.</p>
-          <a href="https://wa.me/085692517903?text=KAK BELI LUMPIA KERING [NOMINAL]" class="kartu-tombol-beli">COMING
-            SOON</a>
+          <a href="#" class="kartu-tombol-beli coming-soon">COMING SOON</a>
         </div>
       </div>
     </div>
@@ -639,19 +649,49 @@
       </div>
     </footer>
 
-    <script>
-      const select = document.getElementById('jumlah');
-      const waLink = document.getElementById('waLink');
-  
-      waLink.addEventListener('click', function (e) {
-        e.preventDefault(); 
-        const jumlah = select.value;
-        const pesan = `Kak saya beli cireng ${jumlah} pcs`;
-        const nomorWA = '6285891015129'; 
-        const link = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
-        window.open(link, '_blank');
-      });
-    </script>
+    
+<script>
+  const comingSoonButtons = document.querySelectorAll('.coming-soon');
+  comingSoonButtons.forEach(button => {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      alert("Belum tersedia");
+    });
+  });
+
+  // Tombol X untuk menutup overlay
+  const closeOverlayBtn = document.getElementById("closeOverlay");
+  const overlay = document.getElementById("overlay");
+  const toggle = document.getElementById("toggle");
+  if (closeOverlayBtn) {
+    closeOverlayBtn.addEventListener("click", () => {
+      toggle.checked = false;
+    });
+  }
+</script>
+
+
+
+<script>
+  const comingSoonButtons = document.querySelectorAll('.coming-soon');
+  comingSoonButtons.forEach(button => {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      alert("Belum tersedia");
+    });
+  });
+
+  const closeOverlayBtn = document.getElementById("closeOverlay");
+  const overlay = document.getElementById("overlay");
+  const toggle = document.getElementById("toggle");
+  if (closeOverlayBtn) {
+    closeOverlayBtn.addEventListener("click", () => {
+      toggle.checked = false;
+    });
+  }
+</script>
+
+
 </body>
 
 </html>
