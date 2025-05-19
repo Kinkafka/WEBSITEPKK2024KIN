@@ -37,9 +37,9 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      /* background-color: #a39874; */
+      /* background-color: #dfb52ce3; */
       background-image: url(https://img.freepik.com/free-vector/seamless-pizza-ingredients_1176-269.jpg?t=st=1732850617~exp=1732854217~hmac=6a90a2ec832fead9dc928a06f46ac548343f800e38627d42575c702c173219aa&w=740);
-      background-size: cover;
+      /* background-size: cover; */
     }
 
     header {
@@ -110,11 +110,12 @@
       text-align: center;
       color: ghostwhite;
       padding: 50px 20px;
-      background-image: url("PorjekPKK/photo (1).jpg");
+      background-image: url("https://raw.githubusercontent.com/Kinkafka/WEBSITEPKK2024KIN/55eb345736058bddcc2af75e12bda2e537fe4e84/PorjekPKK/photo%20(1).jpg");
       background-size: cover;
       background-position: center;
-      height: 450px;
+      height: 490px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      border:#000 6px;
       position: relative;
     }
 
@@ -122,8 +123,8 @@
       /* font-family: "Poppins", sans-serif; */
       font-weight: 400 bold;
       font-style: normal;
-      font-size: 65px;
-      margin-top: 100px;
+      font-size: 80px;
+      margin-top: 140px;
       color: #ffffff;
       /* -webkit-text-stroke: 0.4px black; */
       text-shadow: 0 5px 5px black;
@@ -142,9 +143,10 @@
     /* nagian tombol */
     .button-52 {
       font-size: 16px;
-      font-weight: 200;
+      font-weight: bold;
+      font-style: initial;
       letter-spacing: 9px;
-      background-color: rgba(255, 255, 255, 0);
+      background-color: rgba(0, 0, 0, 0.096);
       padding: 13px 20px;
       border: 1px solid black;
       position: relative;
@@ -170,6 +172,7 @@
       visibility: hidden;
       opacity: 0;
       transition: opacity 0.3s ease;
+      z-index: 9999;
     }
 
     /* lupa nama pokoknya kotak */
@@ -511,7 +514,7 @@
         <li><a href="#beranda">Beranda</a></li>
         <li><a href="#menu">Menu</a></li>
         <li><a href="#testii">Testimoni</a></li>
-        <li><a href="#about">Alamat</a></li>
+        <li><a href="#about">About</a></li>
       </ul>
     </nav>
   </header>
@@ -522,7 +525,7 @@
   <section id="beranda" class="hero">
     <h1><span style="color: rgb(240, 255, 103);font-family: Verdana, Geneva, Tahoma, sans-serif;">CEMILAN</span> CERIA</h1>
     <!-- <p>Cemilan Renyah dan Enak untuk Setiap Kesempatan</p> -->
-    <label for="toggle" class="button-52" style="color: black;">BELI SEKARANG</label>
+    <label for="toggle" class="button-52" style="color: rgb(255, 255, 255);">BELI SEKARANG</label>
   </section>
 
   <div class="overlay" id="overlay">
@@ -561,9 +564,9 @@
     </div>
   </div>
 
-  <h1 style="color: #ffffff;text-align: center;gap: 10px;font-size: 100px;">MENU</h1>
+  <h1 id="menu" style="color: #ffffff;text-align: center;gap: 10px;font-size: 60px; margin-top: 70px;">MENU KAMI</h1>
 
-  <div id="menu" class="kontainer">
+  <div class="kontainer">
     <div class="kontainer1">
       <div class="artikel">
         <img src="Produsen-Keripik-Pisang-1024x622-removebg-preview.png" alt="Cireng" class="kgambar">
@@ -580,8 +583,8 @@
           <h2 class="judul">Cireng Isi Ayam Suir Pedas</h2>
           <!-- <p class="deskripsi1">Rp3000</p> -->
           <p class="deskripsi">Cireng isi ayam suir pedas dibuat dari tepung tapioka dan ayam suir pedas, menciptakan camilan gurih yang nikmat dan cocok sebagai teman santai.</p>
-          <a href="https://wa.me/085692517903?text=KAK BELI CIRENG [NOMINAL]" class="kartu-tombol-beli">Beli
-            Sekarang (Rp3000)</a>
+          <label for="toggle" class="kartu-tombol-beli" style="cursor: pointer;">Beli Sekarang (Rp3000)</label>
+
         </div>
       </div>
       <div class="artikel">
@@ -631,7 +634,7 @@
         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Jl.Baladewa%2C%20kp%20sukamana%2CRT%2003%2F03%2C%20kode%20pos%20%3A41373%2C%20kecamatan%20cikampek%2C%20kabupaten%20karawang&zoom=10&maptype=satellite"></iframe>
     </div>
     <footer id="about">
-      <p>&copy; admin.</p>
+      <p>&copy; MEDIA SOSIAL</p>
       <div class="media-sosial">
         <a href="https://www.instagram.com/cemilanceeria/">
           <i class="fab fa-instagram"></i>
@@ -660,6 +663,20 @@
       alert("Belum tersedia");
     });
   });
+  
+  const jumlahSelect = document.getElementById("jumlah");
+  const waLink = document.getElementById("waLink");
+
+  function updateWALink() {
+    const jumlah = jumlahSelect.value;
+    const nomorWA = "6285891015129";
+    const pesan = `KAK BELI CIRENG ${jumlah} PCS`;
+    const url = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
+    waLink.href = url;
+  }
+
+  jumlahSelect.addEventListener("change", updateWALink);
+  document.addEventListener("DOMContentLoaded", updateWALink);
 
 
   const closeOverlayBtn = document.getElementById("closeOverlay");
