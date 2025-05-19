@@ -97,8 +97,8 @@
 
     nav a:hover {
       color: #fff;
-      background-color: #caff37;
-      -webkit-text-stroke: 0.4px black;
+      background-color: #fcff37;
+      /* -webkit-text-stroke: 0.4px black; */
       transform: scale(1.1);
     }
 
@@ -110,7 +110,7 @@
       text-align: center;
       color: ghostwhite;
       padding: 50px 20px;
-      background-image: url("https://github.com/Kinkafka/WEBSITEPKK2024KIN/blob/main/PorjekPKK/hq720%20(1).jpg?raw=true");
+      background-image: url("PorjekPKK/photo (1).jpg");
       background-size: cover;
       background-position: center;
       height: 450px;
@@ -144,17 +144,19 @@
       font-size: 16px;
       font-weight: 200;
       letter-spacing: 9px;
-      background-color: rgb(255, 255, 255);
+      background-color: rgba(255, 255, 255, 0);
       padding: 13px 20px;
       border: 1px solid black;
       position: relative;
       margin-top: 20px;
+      border-radius: 5px;
     }
 
     .button-52:hover {
     outline-color: transparent;
+    background-color: #ffcc00;
     outline-style:solid;
-    transition: 0.7s;
+    transition: 1s;
     }
     .overlay {
       position: fixed;
@@ -261,7 +263,7 @@
   text-decoration: none;
   border-radius: 8px;
   margin-top: 15px;
-  width: 100%;
+  /* width: 100%; */
   font-weight: 600;
   font-size: 16px;
   transition: all 0.3s ease-in-out;
@@ -373,7 +375,7 @@
       justify-content: center;
       align-items: center;
       margin: 20px auto;
-      padding: 15px;
+      padding: 40px;
       width: 1000px;
       height: 300px;
       gap: 55px;
@@ -659,27 +661,6 @@
     });
   });
 
-
-  const closeOverlayBtn = document.getElementById("closeOverlay");
-  const overlay = document.getElementById("overlay");
-  const toggle = document.getElementById("toggle");
-  if (closeOverlayBtn) {
-    closeOverlayBtn.addEventListener("click", () => {
-      toggle.checked = false;
-    });
-  }
-</script>
-
-
-
-<script>
-  const comingSoonButtons = document.querySelectorAll('.coming-soon');
-  comingSoonButtons.forEach(button => {
-    button.addEventListener('click', function (e) {
-      e.preventDefault();
-      alert("Belum tersedia");
-    });
-  });
 
   const closeOverlayBtn = document.getElementById("closeOverlay");
   const overlay = document.getElementById("overlay");
