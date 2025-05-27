@@ -142,6 +142,7 @@
 
     /* nagian tombol */
     .button-52 {
+      text-decoration: none;
       font-size: 16px;
       font-weight: bold;
       font-style: initial;
@@ -525,7 +526,8 @@
   <section id="beranda" class="hero">
     <h1><span style="color: rgb(240, 255, 103);font-family: Verdana, Geneva, Tahoma, sans-serif;">CEMILAN</span> CERIA</h1>
     <!-- <p>Cemilan Renyah dan Enak untuk Setiap Kesempatan</p> -->
-    <label for="toggle" class="button-52" style="color: rgb(255, 255, 255);">BELI SEKARANG</label>
+   <a href="#menu" class="button-52" style="color: rgb(255, 255, 255);">BELI SEKARANG</a>
+
   </section>
 
   <div class="overlay" id="overlay">
@@ -535,18 +537,8 @@
 
       <p>SILAKAN DIISI</p>
       <label for="jumlah">Jumlah barang:</label><br>
-      <select id="jumlah" name="jumlah" style="margin-top: 8px; padding: 6px; width: 100%;">
-        <option value="1">1 pcs</option>
-        <option value="2">2 pcs</option>
-        <option value="3">3 pcs</option>
-        <option value="4">4 pcs</option>
-        <option value="5">5 pcs</option>
-        <option value="6">6 pcs</option>
-        <option value="7">7 pcs</option>
-        <option value="8">8 pcs</option>
-        <option value="9">9 pcs</option>
-        <option value="10">10 pcs</option>
-      </select>
+      <select id="jumlah" name="jumlah" style="margin-top: 8px; padding: 6px; width: 100%;"></select>
+       <div style="margin-top: 10px; font-weight: bold; font-family: 'Times New Roman', Times, serif;" id="totalharga">Total: Rp 0</div>
 
       <a href="#" id="waLink" target="_blank"
        style="
@@ -662,38 +654,45 @@
 
     
 <script>
-  const comingSoonButtons = document.querySelectorAll('.coming-soon');
-  comingSoonButtons.forEach(button => {
-    button.addEventListener('click', function (e) {
-      e.preventDefault();
-      alert("Belum tersedia");
-    });
-  });
-  
-  const jumlahSelect = document.getElementById("jumlah");
-  const waLink = document.getElementById("waLink");
+  document.querySelectorAll('.coming-soon').forEach(btn =>
+    btn.addEventListener('click', e => {
+      e.preventDefault()
+      alert("Belum tersedia")
+    })
+  )
 
-  function updateWALink() {
-    const jumlah = jumlahSelect.value;
-    const nomorWA = "6285891015129";
-    const pesan = `KAK BELI CIRENG ${jumlah} PCS`;
-    const url = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
-    waLink.href = url;
+  const select = document.getElementById("jumlah"),
+        waLink = document.getElementById("waLink"),
+        totalEl = document.getElementById("totalharga"),
+        harga = 3000
+
+  select.innerHTML = Array.from({ length: 50 }, (_, i) => `<option value="${i + 1}">${i + 1} pcs</option>`).join('')
+
+  const updateTotal = () => {
+    const jumlah = parseInt(select.value)
+    totalEl.textContent = `Total: Rp ${jumlah * harga}`
   }
 
-  jumlahSelect.addEventListener("change", updateWALink);
-  document.addEventListener("DOMContentLoaded", updateWALink);
-
-
-  const closeOverlayBtn = document.getElementById("closeOverlay");
-  const overlay = document.getElementById("overlay");
-  const toggle = document.getElementById("toggle");
-  if (closeOverlayBtn) {
-    closeOverlayBtn.addEventListener("click", () => {
-      toggle.checked = false;
-    });
+  const updateWA = () => {
+    const jml = parseInt(select.value)
+    waLink.href = `https://wa.me/6285891015129?text=${encodeURIComponent(`KAK BELI CIRENG ${jml} PCS - TOTAL Rp ${jml * harga}`)}`
   }
+
+  select.addEventListener('change', () => {
+    updateTotal()
+    updateWA()
+  })
+
+  document.addEventListener("DOMContentLoaded", () => {
+    updateTotal()
+    updateWA()
+  })
+
+  document.getElementById("closeOverlay")?.addEventListener("click", () => {
+    document.getElementById("toggle").checked = false
+  })
 </script>
+
 
 
 </body>
