@@ -163,19 +163,63 @@
     transition: 1s;
     }
     .overlay {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.7);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      visibility: hidden;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      z-index: 9999;
-    }
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+#toggle:checked ~ .overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay-content {
+  background: #fefefe;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 400px;
+  width: 400px;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+
+.overlay-content h2 {
+  font-size: 20px;
+  color: #e63946;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.overlay-content p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  color: #e63946;
+}
 
     /* lupa nama pokoknya kotak */
     #toggle:checked ~ .overlay {
@@ -183,21 +227,21 @@
       opacity: 1;
     }
 
-    .overlay-content {
+    /* .overlay-content {
       background: white;
       padding: 20px;
       border-radius: 15px;
       text-align: center;
-    }
+    } */
 
-    .close-btn {
+    /* .close-btn {
       margin-top: 10px;
       padding: 8px 16px;
       background: #333;
       color: white;
       border: none;
       cursor: pointer;
-    }
+    } */
     
 
     .kontainer {
@@ -474,6 +518,8 @@
     font-size: 16px;
   }
 
+  
+
   .kontainer1 {
     /* flex-direction: column; */
     align-items: center;
@@ -490,6 +536,32 @@
 
   .texttesti {
     font-size: 36px;
+  }
+
+    /* .overlay-content h2 {
+    font-size: 16px;
+    line-height: 1.3;
+  } */
+
+  .overlay-content p,
+  .harga {
+    font-size: 14px;
+  }
+
+  .tombolbeli {
+    font-size: 14px;
+    padding: 10px 16px;
+    margin-top: 12px;
+  }
+
+  .close-btn {
+    font-size: 100px;
+    background: none;
+    color: #000;
+    right: 10px;
+    top: 15px;
+    font-weight: bold;
+    font-size: 20px;
   }
 
   .mapswrapper {
@@ -512,7 +584,49 @@
   }
 }
 
-  </style>
+  
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#toggle:checked ~ .overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay-content {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 90%;
+  margin-right: 40px;
+  color: black;
+}
+
+.overlay-content h2 {
+  font-size: 24px;
+  color: red;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+</style>
 </head>
 
 <body>
@@ -543,21 +657,15 @@
   </section>
 
   <div class="overlay" id="overlay">
-    <div class="overlay-content" id="popupBox">
-
-<button id="closeOverlay" class="close-btn">X</button>
-
-      <p>SILAKAN DIISI</p>
-      <select id="jumlah" name="jumlah" style="margin-top: 8px; padding: 6px; width: 100%;"></select>
-      <label for="jumlah">Jumlah barang:</label><br>
-       <div class="harga" id="totalharga">Total: Rp 0</div>
-
-      <a href="#" id="waLink" target="_blank"
-       class="tombolbeli">
-      BELI SEKARANG
-    </a>
-    </div>
+  <div class="overlay-content" id="popupBox">
+    <button id="closeOverlay" class="close-btn">&times;</button>
+    <h2>Pembayaran hanya bisa COD (Bayar di Tempat)</h2>
+    <p>Silakan pilih jumlah:</p>
+    <select id="jumlah" name="jumlah" style="padding: 6px; border-radius: 6px; width: 100%;"></select>
+    <div class="harga" id="totalharga" style="margin: 10px 0; font-size: 16px; font-weight: bold;">Total: Rp 0</div>
+    <a href="#" id="waLink" target="_blank" class="tombolbeli">BELI SEKARANG</a>
   </div>
+</div>
 
   <h1 id="menu" style="color: #ffffff;text-align: center;gap: 10px;font-size: 50px; margin-top: 70px;">MENU KAMI</h1>
 
